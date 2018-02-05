@@ -1,0 +1,24 @@
+{
+  "name": "json-api-denormalizer",
+  "version": "1.0.0",
+  "description": "Node utility function to denormalize json api data.",
+  "main": "lib/index.js",
+  "repository": "https://github.com/gobadiah/json-api-denormalizer",
+  "author": "Michaël Journo",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "build": "mkdir -p lib && babel -o lib/index.js src/index.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-jest": "^22.1.0",
+    "jest": "^22.1.4"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "memoizee": "^0.4.11"
+  }
+}

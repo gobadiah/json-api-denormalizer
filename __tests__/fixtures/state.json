@@ -1,0 +1,106 @@
+{
+    "providers": {
+        "data": [
+            {
+                "attributes": {
+                    "provider": "facebook",
+                    "uid": "10155164220021500"
+                },
+                "id": "1",
+                "links": {
+                    "self": "http://127.0.0.1:8000/providers/1"
+                },
+                "type": "providers"
+            },
+            {
+                "attributes": {
+                    "provider": "google",
+                    "uid": "108051314560782745064"
+                },
+                "id": "2",
+                "links": {
+                    "self": "http://127.0.0.1:8000/providers/2"
+                },
+                "type": "providers"
+            }
+        ]
+    },
+    "stats": {
+        "data": [
+            {
+                "attributes": {
+                    "data": {
+                        "kincube-ranking": 36457,
+                        "service": 3453
+                    },
+                    "date": "2018-01-30"
+                },
+                "id": "2",
+                "relationships": {
+                    "user": {
+                        "data": {
+                            "id": "1",
+                            "type": "users"
+                        },
+                        "links": {
+                            "related": "http://127.0.0.1:8000/users/1"
+                        }
+                    }
+                },
+                "type": "stats"
+            }
+        ]
+    },
+    "users": {
+        "data": [
+            {
+                "attributes": {
+                    "birthday": "1986-02-11",
+                    "club": "Paris",
+                    "dominant-hand": "right_handed",
+                    "email": "gobadiah@gmail.com",
+                    "first-name": "Micha\u00ebl",
+                    "gender": "male",
+                    "last-name": "Journo",
+                    "picture": "https://kincube-development.s3.amazonaws.com/u1/misc/2018-01-30_dbf8b88d-a7ae-445a-9ec4-7c551f7bacc3.jpeg",
+                    "ranking": "-30"
+                },
+                "id": "1",
+                "links": {
+                    "self": "http://127.0.0.1:8000/users/1"
+                },
+                "relationships": {
+                    "current-stats": {
+                        "data": {
+                            "id": "2",
+                            "type": "stats"
+                        },
+                        "links": {
+                            "related": "http://127.0.0.1:8000/users/1/current_stats"
+                        }
+                    },
+                    "providers": {
+                        "data": [
+                            {
+                                "id": "2",
+                                "type": "providers"
+                            },
+                            {
+                                "id": "1",
+                                "type": "providers"
+                            }
+                        ],
+                        "links": {
+                            "related": "http://127.0.0.1:8000/users/1/providers",
+                            "self": "http://127.0.0.1:8000/users/1/relationships/providers"
+                        },
+                        "meta": {
+                            "count": 2
+                        }
+                    }
+                },
+                "type": "users"
+            }
+        ]
+    }
+}
