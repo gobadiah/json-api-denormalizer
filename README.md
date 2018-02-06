@@ -1,6 +1,6 @@
 # json-api-denormalizer
 
-[![Build Status](https://travis-ci.org/gobadiah/json-api-denormalizer.svg?branch=develop)](https://travis-ci.org/gobadiah/json-api-denormalizer)
+[![Build Status](https://travis-ci.org/gobadiah/json-api-denormalizer.svg?branch=master)](https://travis-ci.org/gobadiah/json-api-denormalizer)
 
 Denormalize a state build by https://github.com/redux-json-api/redux-json-api.
 
