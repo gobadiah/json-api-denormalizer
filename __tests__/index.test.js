@@ -18,8 +18,7 @@ describe('Denormalizer', () => {
     expect(result.users['1'].type).toBe('users');
     expect(result.stats['2'].type).toBe('stats');
 
-    expect(result.stats['2'].data['kincube-ranking']).toBe(36457);
-    expect(result.stats['2'].data.service).toBe(3453);
+    expect(result.stats['2'].data['ranking']).toBe(36457);
 
     const stats = result.stats['2'];
 
@@ -29,7 +28,7 @@ describe('Denormalizer', () => {
   it('should reuse reference for each object', () => {
     const result = denormalizer(state);
 
-    result.stats['2'].data['kincube-ranking'] = 'hello-world';
-    expect(result.users['1'].current_stats.data['kincube-ranking']).toBe('hello-world');
+    result.stats['2'].data['ranking'] = 'hello-world';
+    expect(result.users['1'].current_stats.data['ranking']).toBe('hello-world');
   });
 });

@@ -56,5 +56,40 @@ export default memoize(state => {
       });
     });
   });
+  result.toJSON = () => removeCircularReferences(result);
   return result;
+});
+
+export const removeCircularReferences = memoize((obj, cache = []) => {
+  cache.push(obj);
+  if (Array.isArray(obj)) {
+    const result = [];
+    Object.values(obj).forEach((value) => {
+      if (typeof value === 'object') {
+        if (cache.indexOf(value) !== -1) {
+          return;
+        }
+        const newCache = _.clone(cache);
+        result.push(removeCircularReferences(value, newCache));
+        return;
+      }
+      result.push(value);
+    });
+    return result;
+  } else if (typeof obj === 'object' && obj != null) {
+    const result = {};
+    Object.entries(obj).forEach(([key, value]) => {
+      if (typeof value === 'object') {
+        if (cache.indexOf(value) !== -1) {
+          return;
+        }
+        const newCache = _.clone(cache);
+        result[key] = removeCircularReferences(value, newCache);
+        return;
+      }
+      result[key] = value;
+    });
+    return result;
+  }
+  return obj;
 });
