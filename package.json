@@ -1,6 +1,6 @@
 {
   "name": "json-api-denormalizer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node utility function to denormalize json api data.",
   "main": "lib/index.js",
   "repository": "https://github.com/gobadiah/json-api-denormalizer",
