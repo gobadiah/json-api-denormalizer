@@ -8,14 +8,15 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "build": "babel -d lib src"
+    "build": "rimraf lib && babel -d lib src"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-jest": "^22.1.0",
-    "jest": "^22.1.4"
+    "jest": "^22.1.4",
+    "rimraf": "^2.6.2"
   },
   "dependencies": {
     "lodash": "^4.17.4",
