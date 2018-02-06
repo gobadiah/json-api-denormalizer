@@ -13,9 +13,7 @@ const blacklist = [
 
 export default memoize(state => {
   const result = {};
-  console.log('compare computing ...');
   Object.keys(state).forEach((key) => {
-    console.log(key, blacklist.indexOf(key));
     if (blacklist.indexOf(key) != -1) {
       return;
     }
